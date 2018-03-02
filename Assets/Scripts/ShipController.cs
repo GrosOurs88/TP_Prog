@@ -4,11 +4,11 @@ public class ShipController : MonoBehaviour {
 
     public Vector2 speed = new Vector2(10, 15);
     private Vector2 movement;
-    private Rigidbody2D rigidbody2D;
+	private Rigidbody2D rigidbody2DShip; // Debug error due to the rigidbody name -> Rename to rigidbody2dShip
 
     void Awake()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidbody2DShip = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -34,7 +34,7 @@ public class ShipController : MonoBehaviour {
 
     void FixedUpdate()  // appele a intervalle fix
     {
-        rigidbody2D.velocity = movement;
+        rigidbody2DShip.velocity = movement;
     }
 
     void OnDestroy()
