@@ -2,7 +2,7 @@
 
 public class HealthManager : MonoBehaviour 
 {
-    public int healthPoint = 10;
+    public int healthPoint = 1;
     public bool isEnemy = true;
 
     private int nbPoulpe = 6;

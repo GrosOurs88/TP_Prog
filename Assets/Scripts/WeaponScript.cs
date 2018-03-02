@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class WeaponScript : MonoBehaviour
 {
@@ -8,7 +6,6 @@ public class WeaponScript : MonoBehaviour
     public float blastingRate = 0.25f;
     public float blastSpeed;
     private float blastCooldown;
-
 
     void Start()
     {
@@ -28,7 +25,6 @@ public class WeaponScript : MonoBehaviour
         if (CanAttack)
         {
             blastCooldown = blastingRate;
-
             Transform blastTransform = Instantiate(blastPrefab, transform.position, transform.rotation).transform;
             blastTransform.position = transform.position;
             if (transform.parent)
